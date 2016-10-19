@@ -18,58 +18,56 @@ function MistWeaver()
   --Start the rotation
 
 
-  if canCast(122281) == true and myHealth < 45 and lowestHealth < 70 then
-    CastSpellByID(122281, "player")
+  if canCast(Healing_Elixir) == true and myHealth < 45 and lowestHealth < 70 then
+    CastSpellByID(Healing_Elixir, "player")
   end
 
-  if canCast(197908) == true and myMana < 70 or lowestHealth < 80 then
-    CastSpellByID(197908, lowestTarget)
+  if canCast(Mana_Tea) == true and myMana < 70 or lowestHealth < 80 then
+    CastSpellByID(Mana_Tea, lowestTarget)
   end
 
-  if canCast(115151) == true and not checkBuff(lowestTarget, 119611) and lowestHealth < 95 then
-    CastSpellByID(115151, lowestTarget)
+  if canCast(Renewing_Mist) == true and not checkBuff(lowestTarget, 119611) and lowestHealth < 95 then
+    CastSpellByID(Renewing_Mist, lowestTarget)
   end
 
-  if canCast(116670) == true and checkBuff("player", 197206) and averageHealth() < 75 then
-    CastSpellByID(116670, lowestTarget)
+  if canCast(Vivify) == true and checkBuff("player", 197206) and averageHealth() < 75 then
+    CastSpellByID(Vivify, lowestTarget)
   end
 
-  if canCast(116694) == true and lowestHealth < 85 then
-    CastSpellByID(116694, lowestTarget)
+  if canCast(Effuse) == true and lowestHealth < 85 then
+    CastSpellByID(Effuse, lowestTarget)
   end
 
-  if canCast(124682) == true and lowestHealth < 80 then
-    CastSpellByID(124682, lowestTarget)
+  if canCast(Enveoloping_Mist) == true and lowestHealth < 80 then
+    CastSpellByID(Enveoloping_Mist, lowestTarget)
   end
 
-  if canCast(205406) == true and lowestHealth < 90 and GetSpellCount("Sheilun's Gift") >= 5 then
-    CastSpellByID(205406, lowestTarget)
+  if canCast(Sheiluns_Gift) == true and lowestHealth < 90 and GetSpellCount("Sheilun's Gift") >= 5 then
+    CastSpellByID(Sheiluns_Gift, lowestTarget)
   end
 
-  if canCast(198664) == true and averageHealth() < 80 then
-    CastSpellByID(198664, lowestTarget)
+  if canCast(ChiJi) == true and averageHealth() < 80 then
+    CastSpellByID(ChiJi, lowestTarget)
   end
 
-  if canCast(116670) == true and averageHealth() <= 40 then
-
-    CastSpellByID(116670,lowestTarget)
+  if canCast(Vivify) == true and averageHealth() <= 40 then
+    CastSpellByID(Vivify,lowestTarget)
   end
 
-  if canCast(115310) == true and averageHealth() < 40 then
-    CastSpellByID(115310, lowestTarget)
+  if canCast(Revival) == true and averageHealth() < 40 then
+    CastSpellByID(Revival, lowestTarget)
   end
 
-  if canCast(191837) == true and lowestHealth < 30 then
-    CastSpellByID(191837, lowestTarget)
+  if canCast(Essence_Font) == true and lowestHealth < 30 then
+    CastSpellByID(Essence_Font, lowestTarget)
   end
 
-  if canCast(124682) == true and lowestHealth < 30 then
-    CastSpellByID(124682, lowestTarget)
+  if canCast(Enveoloping_Mist) == true and lowestHealth < 30 then
+    CastSpellByID(Enveoloping_Mist, lowestTarget)
   end
 
-  if canCast(116849) == true and lowestHealth < 15 then
-
-    CastSpellByID(116849, lowestTarget)
+  if canCast(Life_Cocoon) == true and lowestHealth < 15 then
+    CastSpellByID(Life_Cocoon, lowestTarget)
   end
 
   --End the rotation
