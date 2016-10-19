@@ -34,16 +34,20 @@ function MistWeaver()
     CastSpellByID(Vivify, lowestTarget)
   end
 
-  if canCast(Effuse) == true and lowestHealth < 85 then
+  if canCast(Sheiluns_Gift) == true and lowestHealth < 90 and GetSpellCount("Sheilun's Gift") >= 5 then
+    CastSpellByID(Sheiluns_Gift, lowestTarget)
+  end
+
+  if canCast(Effuse) == true and lowestHealth > 75 and lowestHealth < 85 then
     CastSpellByID(Effuse, lowestTarget)
   end
 
-  if canCast(Enveoloping_Mist) == true and lowestHealth < 80 then
-    CastSpellByID(Enveoloping_Mist, lowestTarget)
+  if canCast(Enveoloping_Mist) == true and not checkBuff(lowestTarget, Enveoloping_Mist) and lowestHealth > 40 and lowestHealth < 60 then
+    CastSpellByID(Enveoloping_Mist,lowestTarget)
   end
 
-  if canCast(Sheiluns_Gift) == true and lowestHealth < 90 and GetSpellCount("Sheilun's Gift") >= 5 then
-    CastSpellByID(Sheiluns_Gift, lowestTarget)
+  if canCast(Vivify) == true and lowestHealth > 60 and lowestHealth < 75 then
+    CastSpellByID(Vivify, lowestTarget)
   end
 
   if canCast(ChiJi) == true and averageHealth() < 80 then
@@ -60,10 +64,6 @@ function MistWeaver()
 
   if canCast(Essence_Font) == true and lowestHealth < 30 then
     CastSpellByID(Essence_Font, lowestTarget)
-  end
-
-  if canCast(Enveoloping_Mist) == true and lowestHealth < 30 then
-    CastSpellByID(Enveoloping_Mist, lowestTarget)
   end
 
   if canCast(Life_Cocoon) == true and lowestHealth < 15 then
