@@ -1,7 +1,6 @@
 ## Interface: 70000
 ## Title: |cffFF6EB4Misty
 ## Notes: Hi, I'm Misty, I make your life so much easier!
-## Version: a3
 
 Utilities\Manager\group.lua
 Utilities\Manager\groupGetter.lua
@@ -11,7 +10,9 @@ Utilities\BuffCheck\Class\Monk\MistWeaver\buffs.lua
 Utilities\BuffCheck\Class\Monk\MistWeaver\basBuff.lua
 
 Rotations\Class\Monk\MistWeaver\Rotation.lua
-Rotations\Class\Monk|MistWeaver\RotationBack.lua
+Rotations\Class\Monk\MistWeaver\RotationBack.lua
+Rotations\Class\Monk\WindWalker\Rotation.lua
+Rotations\Class\Monk\MistWeaver\RotationBack.lua
 
 Core\spells\spells.lua
 

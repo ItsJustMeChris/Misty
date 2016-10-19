@@ -7,10 +7,10 @@ SlashCmdList["MISTY"] = handler;
 
 function toggled()
   if Toggle == true then
-    print("off")
+    print("[Misty] says:  Aww, ok I'll go away!  Have fun ^.^")
     Toggle = false else if
     Toggle == false then
-      print("on")
+      print("[Misty] says:  Oh boy, I'm so ready to do this!")
       Toggle = true
     end
   end
@@ -22,7 +22,7 @@ function Start()
   MainFrame:SetScript("OnEvent", MainFrame_OnEvent)
   MainFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
   MainFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
-  print("Hi, I'm misty!")
+  print("[Misty] says:  Oh, hello!  My name is Misty, I'll take it from here!")
 end
 
 function MainFrame_OnUpdate(self, elapsed)
