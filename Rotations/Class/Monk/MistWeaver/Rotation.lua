@@ -1,3 +1,11 @@
+--Returns my health and mana and if i'm in combat
+myMana = getMana("player")
+myHealth = getHealth("player")
+myChi = getChi("player")
+inCombat = UnitAffectingCombat("player")
+--Returns target health (For Damage/Tank class)
+targetHealth = getHealth("target")
+
 function MistWeaver()
   getGroup(); --Gets the group/party
   getTank(); --Gets the tank (broken)

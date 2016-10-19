@@ -3,10 +3,6 @@
 ## Notes: Hi, I'm Misty, I make your life so much easier!
 ## Version: a5
 
-Core\spells\Class\Monk\MistWeaver\spells.lua
-
-Rotations\Class\Monk\MistWeaver\Rotation.lua
-Rotations\Class\Monk\WindWalker\Rotation.lua
 Rotations\RotationsBack.lua
 
 Utilities\BuffCheck\checkBuff.lua
@@ -15,5 +11,12 @@ Utilities\Manager\group.lua
 Utilities\Manager\groupGetter.lua
 Utilities\Manager\rotationManager.lua
 Utilities\Manager\spellQue.lua
+
+Rotations\Class\Monk\MistWeaver\Rotation.lua
+Rotations\Class\Monk\WindWalker\Rotation.lua
+
+Core\spells\Class\Monk\MistWeaver\spells.lua
+
+
 
 Misty.lua
