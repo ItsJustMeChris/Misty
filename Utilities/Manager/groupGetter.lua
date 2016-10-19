@@ -1,32 +1,4 @@
-
-Group = {
-  tank = {},
-  healer = {},
-  party = {},
-}
-
-Targets = {
-  target = {}
-
-}
-
-function getHealth(unit)
-  if UnitIsVisible(unit) then
-    return 100 * UnitHealth(unit) / UnitHealthMax(unit);
-  end
-end
-myHealth = getHealth("player")
-function getMana(unit)
-  local groupType = IsInRaid() and "raid" or "party";
-  if UnitIsVisible(unit) then
-    return 100 * UnitMana(unit) / UnitManaMax(unit);
-  end
-end
-myMana = getMana("player")
-
-
-
-
+--Gets the party/party type and sorts them by health.
 function getGroup()
   local groupType = IsInRaid() and "raid" or "party";
   Group.party = {}
@@ -41,8 +13,7 @@ function getGroup()
   return Group.party
 end
 
-
-
+--Should get tank but it's broken
 function getTank()
   local groupType = IsInRaid() and "raid" or "party";
   local playerType = UnitGroupRolesAssigned(unit)
@@ -57,7 +28,7 @@ function getTank()
   return Group.tank
 end
 
-
+--Should get healer but its broeken
 function getHealer()
   local groupType = IsInRaid() and "raid" or "party";
   local playerType = UnitGroupRolesAssigned(unit)
