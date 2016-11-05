@@ -4,7 +4,7 @@
 ## Version: a5
 
 Rotations\RotationsBack.lua
-
+Core\spells\Class\Monk\MistWeaver\spells.lua
 Utilities\BuffCheck\checkBuff.lua
 
 Utilities\Manager\group.lua
@@ -15,7 +15,7 @@ Utilities\Manager\spellQue.lua
 Rotations\Class\Monk\MistWeaver\Rotation.lua
 Rotations\Class\Monk\WindWalker\Rotation.lua
 
-Core\spells\Class\Monk\MistWeaver\spells.lua
+
 
 
 

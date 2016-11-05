@@ -27,3 +27,4 @@ Transcendence_Transfer = 119996;
 Vivify = 116670;
 Zen_Pilgrimage = 126892;
 Zen_Pulse = 124081;
+Uplifting_Trance = 197206;
