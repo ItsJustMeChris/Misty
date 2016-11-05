@@ -17,6 +17,8 @@ end
     MainFrame:SetScript("OnEvent", MainFrame_OnEvent)
     MainFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
     MainFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+    MainFrame:RegisterEvent("PLAYER_REGEN_DISABLED")
+    MainFrame:RegisterEvent("PLAYER_REGEN_ENABLED")
     print("[Misty] says:  Oh, hello!  My name is Misty, I'll take it from here!")
   end
 function MainFrame_OnUpdate(self, elapsed)
@@ -30,7 +32,9 @@ Start();
 function MainFrame_OnEvent(self, registeredEvent, ...)
   if registeredEvent == "PLAYER_REGEN_DISABLED" then
     getGroup()
-  end
+  elseif registeredEvent == "PLAYER_REGEN_ENABLED" then
+    table.wipe(Group)
+    end
 end
 
 --Slash commands for toggle macro
