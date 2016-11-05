@@ -27,6 +27,12 @@ function MainFrame_OnUpdate(self, elapsed)
   end
 Start();
 
+function MainFrame_OnEvent(self, registeredEvent, ...)
+  if registeredEvent == "PLAYER_REGEN_DISABLED" then
+    getGroup()
+  end
+end
+
 --Slash commands for toggle macro
 SLASH_MISTY1, SLASH_MISTY2 = '/misty', '/mist';
 function handler(msg, editbox)
