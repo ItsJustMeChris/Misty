@@ -47,9 +47,9 @@ end
 
 
 
-
+        LastSpellID = nil
 AddEventCallback("UNIT_SPELLCAST_START", function(unitID, spell, rank, lineID, spellID) 
-      if unitID == "player" then
+      if UnitIsUnit(unitID, "player") then
         LastSpellID = spellID
         print(LastSpellID)
         print(unitID)
@@ -76,6 +76,7 @@ end)
 
 function wasNotLastSpell(ID)
 if LastSpellID == ID then
+  print("asdlkfj")
   return false
   else
    return true

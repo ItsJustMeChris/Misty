@@ -51,7 +51,7 @@ end
 
 
 
-  if canCast(Renewing_Mist, lowestTarget) and lowestHealth <= 99 then
+  if canCast(Renewing_Mist, lowestTarget) and lowestHealth <= 99 and not checkBuff(lowestTarget, Renewing_Mist) then
     CastSpellByID(Renewing_Mist, lowestTarget)
   end
 
@@ -64,7 +64,9 @@ end
   if canCast(Vivify, lowestTarget) and lowestHealth <= 75 and checkBuff("player", Uplifting_Trance) then
     CastSpellByID(Vivify, lowestTarget)
   end
-
+  if lowestHealth <= 80 then 
+    CastSpellByID(ChiJi)
+  end
   if canCast(Enveoloping_Mist, lowestTarget) and wasNotLastSpell(Enveoloping_Mist) and lowestHealth >= 65 and lowestHealth <= 75 and not checkBuff(lowestTarget, Enveoloping_Mist)  then
     CastSpellByID(Enveoloping_Mist, lowestTarget)
   end
@@ -80,9 +82,10 @@ end
   if canCast(Life_Cocoon, tankTarget) and wasNotLastSpell(Life_Cocoon) and tankHealth and tankHealth <= 25 and not checkBuff(tankHealth, Life_Cocoon) then
     CastSpellByID(Life_Cocoon, tankTarget)
   end
-  if canCast(Effuse, lowestTarget) and lowestHealth <= 80 then
+  if canCast(Effuse, lowestTarget) and lowestHealth >= 50 and lowestHealth <= 80 then
     CastSpellByID(Effuse, lowestTarget)
   end
+
     isHeDead()
   --End the rotation
 end
